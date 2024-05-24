@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Top 10 Most Endangered Animals",
+    "description": "How to Help Save Them",
+    "image": "./beer.png"
+  },
+  {
+    "id": 2,
+    "title": "Incredible Animal Adaptations",
+    "description": "How Wildlife Thrives in Extreme Environments",
+    "image": "./zebra.png"
+  },
+  {
+    "id": 3,
+    "title": "Unveiling Nature's Mysteries",
+    "description": "Fascinating Animal Behaviors Explained",
+    "image": "./monkey.png"
+  },
+  {
+    "id": 4,
+    "title": "Caring for Your Furry Friend",
+    "description": "Essential Pet Care Tips",
+    "image": "./cat.png"
+  },
+  {
+    "id": 5,
+    "title": "Understanding Horse Behavior",
+    "description": "Insights into Equine Psychology",
+    "image": "./horse.png"
+  }
+]

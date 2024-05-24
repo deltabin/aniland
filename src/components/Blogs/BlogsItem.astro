@@ -1,0 +1,13 @@
+---
+const { image, title, description } = Astro.props;
+---
+
+<div class="min-w-[470px] max-w-[470px] bg-white mb-[56px] cursor-pointer">
+  <img
+    src={image}
+    alt={title}
+    class="w-full h-[284px] object-cover rounded-t-lg"
+  />
+  <h1 class="mt-2 font-bold text-xl">{title}</h1>
+  <p class="mt-1 text-gray-600">{description}</p>
+</div>

@@ -1,0 +1,10 @@
+---
+const { image, label } = Astro.props;
+---
+
+<div
+  class="w-[9.375rem] h-[9.375rem] flex flex-col items-center justify-center transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-[#3BC853] duration-300"
+>
+  <img class="w-[7.5rem] h-[6.25rem]" src={image} alt={label} />
+  <span class="mt-3 text-sm">{label}</span>
+</div>

@@ -1,0 +1,72 @@
+---
+const navLinks = [
+  {
+    label: "Collections",
+    href: "/collections",
+  },
+  {
+    label: "Blogs",
+    href: "/blogs",
+  },
+  {
+    label: "About Us",
+    href: "/about-us",
+  },
+];
+---
+
+<header class="header">
+  <div class="max-w-[90rem] mx-auto">
+    <div class="px-[3.75rem] pt-[2.313rem] flex justify-between items-center">
+      <div class="flex gap-9 items-center">
+        <a href="/" class="font-semibold text-[#3BC853] text-3xl uppercase"
+          >AniLand</a
+        >
+        <nav class="flex gap-[3.125rem] text-lg font-inter text-[#BDBDBD]">
+          {
+            navLinks.map(({ label, href }) => (
+              <a
+                class="transition ease-in-out hover:text-[#3BC853] duration-300"
+                href={href}
+              >
+                {label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+      <div>
+        <input
+          class="border-[0.75px] font-inter text-[#BDBDBD] border-[#BDBDBD] rounded-xl px-4 py-2 bg-transparent"
+          placeholder="Search for..."
+        />
+      </div>
+    </div>
+
+    <div class="px-[3.75rem] mt-[7.625rem] pb-[12.5rem]">
+      <div class="text-white">
+        <h1 class="font-bold text-[4.188rem] leading-tight">
+          Discover the<br /> Wonders of the
+          <br />
+          <span class="text-[#3BC853]">Animal</span> Kingdom
+        </h1>
+        <p class="font-bold mt-4">
+          Dive into detailed articles, stunning images, and fun facts about a
+          wide<br /> range of species from around the globe. Our encyclopedia provides
+          the<br /> information and inspiration you need to learn more about the
+          incredible<br /> diversity of life on Earth.
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    background-image: url("./image.webp");
+    background-position: center 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>

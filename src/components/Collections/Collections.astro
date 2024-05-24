@@ -1,0 +1,34 @@
+---
+import CollectionItem from "./CollectionItem.astro";
+
+interface IResponseCollections {
+  id: number;
+  label: string;
+  image: string;
+}
+
+const response = await fetch(
+  "https://664ed81bfafad45dfae13e27.mockapi.io/collections",
+);
+
+const data: IResponseCollections[] = await response.json();
+---
+
+<section class="px-[2.313rem]">
+  <div>
+    <h1 class="font-bold text-[5.25rem] text-[#3BC853]">Collections</h1>
+    <h2 class="text-[3.106rem] text-[#E3EAE6]">
+      <span class="font-semibold">All</span>
+      you want to
+      <span class="font-semibold">know</span> about
+      <span class="font-semibold">animals</span>
+    </h2>
+  </div>
+  <div class="grid grid-cols-2 gap-x-4">
+    {
+      data.map(({ label, image }) => (
+        <CollectionItem label={label} image={image} />
+      ))
+    }
+  </div>
+</section>
