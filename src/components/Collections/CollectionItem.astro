@@ -1,19 +1,25 @@
 ---
-const { label, image } = Astro.props;
+const { label, image, link } = Astro.props;
 ---
 
-<div
-  class="relative mt-[2.313rem] w-[656px] h-[417px] transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 cursor-pointer"
->
+<a href={link}>
   <div
-    class="absolute inset-0 bg-gradient-to-t from-black/70 rounded-xl to-transparent"
+    class="relative mt-[2.313rem] transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300 cursor-pointer"
   >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-black/70 rounded-xl to-transparent"
+    >
+    </div>
+    <img
+      class="w-full h-full object-cover rounded-xl"
+      src={image}
+      alt={label}
+    />
+    <span
+      class="font-semibold text-[43px] text-[#3BC853] absolute bottom-[0.963rem] left-[0.963rem]"
+    >
+      {label}
+      <span class="text-white">Animals</span>
+    </span>
   </div>
-  <img class="w-full h-full object-cover rounded-xl" src={image} alt={label} />
-  <span
-    class="font-semibold text-[43px] text-[#3BC853] absolute bottom-[0.963rem] left-[0.963rem]"
-  >
-    {label}
-    <span class="text-white">Animals</span>
-  </span>
-</div>
+</a>

@@ -5,6 +5,7 @@ interface IResponseCollections {
   id: number;
   label: string;
   image: string;
+  link: string;
 }
 
 const response = await fetch(
@@ -26,8 +27,8 @@ const data: IResponseCollections[] = await response.json();
   </div>
   <div class="grid grid-cols-2 gap-x-4">
     {
-      data.map(({ label, image }) => (
-        <CollectionItem label={label} image={image} />
+      data.map(({ label, image, link }) => (
+        <CollectionItem label={label} image={image} link={link} />
       ))
     }
   </div>
